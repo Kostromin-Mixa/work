@@ -1,6 +1,8 @@
 version: '2'
 
 services:
-  hello world:
+  hello-world:
     build: .
-    command: ['guncorn app.py']
+    command: ['/opt/app/entrypoint.sh']
+    ports:
+      - "5000:5000"

@@ -11,8 +11,11 @@ RUN apk add --no-cache python3 \
     && pip3 install --upgrade pip gunicorn \
     && adduser -D -h $APP_PATH $GUNICORN_USER
 
-ADD . $APP_PATH
-
 USER $GUNICORN_USER
 WORKDIR $APP_PATH
-CMD ['gunicorn app.py']
+ADD requirements.txt $APP_PATH/
+RUN pip3 install -r requirements.txt
+
+ADD entrypoint.sh $APP_PATH/
+ADD *.py $APP_PATH/
+RUN chmod +x entrypoint.sh

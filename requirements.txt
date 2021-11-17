@@ -1,2 +1,3 @@
 # Dummy file, so the Dockerfile can contain a step about installing app
 # dependencies.
+Flask==1.1.2

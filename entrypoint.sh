@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd $APP_PATH
-gunicorn --bind 0.0.0.0:$GUNICORN_PORT $GUNICORN_MODULE:$GUNICORN_CALLABLE
+cd /opt/app
+gunicorn --bind 0.0.0.0:5000 wsgi:app

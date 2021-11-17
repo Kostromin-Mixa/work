@@ -1,4 +1,4 @@
-Нужно докеризировать простое hello world приложение https://realpython.com/flask-by-example-part-1-project-setup/#project-setup
+Нужно докеризировать простое hello world приложение.   
 Внутри контейнера оно должно запускаться с помощью gunicorn.
 
 
